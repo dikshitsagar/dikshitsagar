@@ -16,3 +16,10 @@ def addition_udf(val1, val2):
     final_val = val1+val2
     return final_val
     ';
+
+
+======= UDF in Anaconda ===== 
+
+@udf(is_permanent = True, stage_location = 'ENTERPRISES_STAGE', session= session, name= 'test')
+def log_predict(x: int) -> int:
+    return x+2
